@@ -1,7 +1,7 @@
 // import npm packages
 const express = require('express')
 const logger = require('morgan')
-const cors = require("cors")
+const cors = require('cors')
 
 // import routers
 const indexRouter = require('./routes/index.js')
