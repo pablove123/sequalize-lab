@@ -1,6 +1,4 @@
-const { Router } = require('express')
-
-const router = Router()
+const router = require('express').Router()
 
 // GET localhost:3000/
 router.get('/', function(req, res) {
