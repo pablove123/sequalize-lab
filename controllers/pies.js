@@ -18,7 +18,8 @@ const index = async (req,res) => {
 }
 const show = async (req,res) => {
   try {
-  
+    const pie = await Pie.findByPk(req.params.id)
+    res.status(200).json(pie)
   } catch (error) {
     console.log(error)
   }
