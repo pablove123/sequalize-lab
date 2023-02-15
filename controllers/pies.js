@@ -18,7 +18,7 @@ const index = async (req,res) => {
 }
 const show = async (req,res) => {
   try {
-    
+  
   } catch (error) {
     console.log(error)
   }
@@ -32,7 +32,10 @@ const deletepie = async (req,res) => {
 }
 const update = async (req,res) => {
   try {
-    
+    const pie = await Pie.findByPk(req.params.id)
+    pie.set(req.body)
+    await pie.save()
+    res.status(200).json(pie)
   } catch (error) {
     console.log(error)
   }
