@@ -10,7 +10,8 @@ const create = async (req,res) => {
 }
 const index = async (req,res) => {
   try {
-    
+    const pies = await Pie.findAll()
+    res.status(200).json(pies)
   } catch (error) {
     console.log(error)
   }
